@@ -4,6 +4,9 @@
   ## Description
   This is a tech blog application, where users can sign in, login, and post their thoughts. Users can also comment on other users' posts, and delete their own posts. This application uses the MVC paradigm, and is built with Handlebars.js, Sequelize, and Express.js. This application is deployed on Heroku, and uses JawsDB for the database.
 
+  ## Preview
+  ![This is an image](/assets/techblog.png)
+
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
@@ -16,7 +19,8 @@
   N/A
 
   ## Usage
-  To use this application, visit the deployed link: 
+  To use this application, visit the deployed link:
+   https://dear-diary-app.herokuapp.com/
 
 
   ## License
