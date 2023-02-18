@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dear Diary</title>
+
+  <link rel="stylesheet" href="/css/jass.css">
+
+</head>
+<body>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <a class="menu-text" href="/">Dear Diary</a>
+    </ul>
+  </div>
+  <div class="log-in-out">
+
+    {{#if loggedIn}}
+    <button class="log" id="logout">Logout</button>
+    {{else}}
+    <a href="/login">
+      <button class="log" id="login">
+        Login
+      </button>
+    </a>
+    {{/if}}
+
+  </div>
+</div>
+<nav>
+  <ul>
+    <li><a href="/dashboard" class="dashboard">Dashboard</a></li>
+    <li><a href="/" class="homepage">Homepage</a></li>
+  </ul>
+</nav>
+
+<main>
+  {{{ body }}}
+</main>
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <p>@2023 Diary</p>
+        </div>
+        <div class="col-4">
+          <p>I don't actually keep a diary </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+{{#if loggedIn}}
+<script src="/js/logout.js"></script>
+
+{{/if}}
+ </body>
+</html>

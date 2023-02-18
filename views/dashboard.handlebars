@@ -1,0 +1,35 @@
+{{#if loggedIn}}
+<div class="review-container">
+    <h1>{{user.username}}'s Dashboard</h1>
+    <div class="cards-containerj" id="add-post">
+        <div class="cardj">
+            <form class="post-form">
+                <label for="title">Post Title:</label>
+                <input type="text" id="title">
+                <br>
+                <label for="body">Post Content:</label>
+                <textarea class="class" id="body" rows="8" cols="70"></textarea>
+                <br>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+
+
+    <br>
+    <h2>My Postings:</h2>
+    {{#each users.posts}}
+    <div class="cards-containerj">
+        <div class="cardj">
+            <a href="/post/{{id}}">
+                <h4>{{title}}</h4>
+            </a>
+            <button class="delete-btn" id="delete-post" data-value="{{id}}">Delete</button>
+        </div>
+    </div>
+    {{/each}}
+ 
+ <script src="/js/addPost.js"></script>
+    <script src="/js/deletePost.js"></script>
+
+    {{/if}}

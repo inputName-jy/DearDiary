@@ -1,0 +1,44 @@
+<div>
+    <div class="container">
+        <h1>{{post.title}}</h1>
+        <p>Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+        <br>
+        <h4>{{post.body}}</h4>
+        <br>
+        <br>
+
+    </div>
+    <br>
+    <br>
+    
+    
+    {{#if loggedIn}}
+    <br>
+    <h2>Comments</h2>
+      <div class="cards-containerj">
+            {{#each post.comments}}
+        <div class="cardj">
+            <p>Posted by: {{user.username}} on {{format_date createdAt}}</p>
+            <h5>{{content}}</h5>
+        </div>
+        {{/each}}
+
+        </div>
+
+        <div class="cards-containerj">
+        <div class="cardj">
+            <form class="comment-form">
+                <label for="content">Add a Comment</label>
+                <textarea class="class" id="content" rows="8" cols="70"></textarea>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        </div>
+  
+ 
+    {{/if}}
+         </div>
+  
+</div>
+
+<script src="/js/comment.js"></script>
