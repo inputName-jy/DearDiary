@@ -8,7 +8,7 @@
             <div class="cardj">
                 <a href="/post/{{post.id}}">
                 <h2>{{post.title}}</h2>
-                <p>Posted: {{format_date post.createdAt}}</p>
+                <p>Posted by: {{post.user.username}} on {{format_date post.createdAt}}</p>
                 </a>
             </div>
         </div>
